@@ -1,0 +1,121 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+body { 
+    background-color: #0c0c0c; 
+    color: #cccccc; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+
+#login-screen {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    height: 100vh; 
+    background: #000; 
+    z-index: 100; 
+    position: fixed; 
+    width: 100%;
+}
+
+.login-box {
+    padding: 30px; 
+    border: 1px solid #333; 
+    border-radius: 5px; 
+    width: 350px;
+    background: #0a0a0a;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+}
+
+h2 { 
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #fff; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+
+input {
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    background: #111; 
+    border: 1px solid #444;
+    color: #00ff41; 
+    outline: none; 
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%; 
+    padding: 12px; 
+    background: #00ff41; 
+    border: none; 
+    color: #000;
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    margin-top: 10px;
+}
+
+button:hover { 
+    background: #00cc33; 
+    box-shadow: 0 0 15px #00ff41; 
+}
+
+
+#admin-panel { 
+    display: none; 
+    height: 100vh; 
+    flex-direction: column; 
+    padding: 10px 20px; 
+}
+
+#terminal-output {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    white-space: pre-wrap; 
+    margin-bottom: 10px;
+    padding-right: 10px;
+    color: #00ff41; 
+}
+
+#terminal-output::-webkit-scrollbar { width: 8px; }
+#terminal-output::-webkit-scrollbar-thumb { background: #00ff41; }
+#terminal-output::-webkit-scrollbar-track { background: #111; }
+
+.input-line { 
+    display: flex; 
+    align-items: center; 
+    padding-bottom: 10px;
+}
+
+.prompt { 
+    color: #00ff41; 
+    margin-right: 8px; 
+    font-weight: bold; 
+}
+
+#terminal-input {
+    background: transparent; 
+    border: none; 
+    color: #00ff41; 
+    width: 100%;
+    outline: none; 
+    font-size: 16px;
+}
+
+.error { color: #ff3e3e; text-align: center; margin-top: 10px; font-size: 12px; }
+.cmd-output { color: #00ff41; line-height: 1.4; padding: 5px 0; }
+.cmd-highlight { color: #ffffff; font-weight: bold; }
+.cmd-table { display: table; width: 100%; margin-top: 5px; }
+.cmd-row { display: table-row; }
+.cmd-cell { display: table-cell; padding-right: 20px; }
